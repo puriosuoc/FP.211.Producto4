@@ -1,0 +1,63 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div class="container">
+
+  <div *ngIf="selectedSong" class="player">
+
+    <div class="songplayer">
+
+      <span class="example-spacer"></span>
+
+      <div class="volumen">
+        <mat-icon color="primary" aria-hidden="false" aria-label="Example home icon" fontIcon="volume_down"></mat-icon>
+        <mat-slider min="0" max="1" step="0.1">
+          <input matSliderThumb type="range" [(ngModel)]="audio.volume">
+        </mat-slider>
+        <mat-icon color="primary" aria-hidden="false" aria-label="Example home icon" fontIcon="volume_up"></mat-icon>
+      </div>
+
+    </div>
+
+      <div class="tiempo">
+
+        <div class="tiempoinicio">
+          {{ secondsToString(audio.currentTime) }}
+        </div>
+
+        <div class="barratiempo" (click)="onProgressClick($event)">
+          <mat-progress-bar class="progress-bar" mode="determinate" [value]="progress"></mat-progress-bar>
+          <div class="circle" [style.--percent]="progress / 100"></div>
+        </div>
+
+        <div class="tiempofin">
+            {{ secondsToString(audio.duration) }}
+        </div>
+
+      </div>
+
+      <div class="botones">
+
+        <div class="pause">
+          <button mat-fab color="primary" aria-label="Example icon button with a delete icon" (click)="pauseSound()" >
+            <mat-icon>pause</mat-icon>
+          </button>
+         </div>
+
+         <div class="play">
+           <button mat-fab color="primary" aria-label="Example icon button with a delete icon" (click)="playSound()">
+             <mat-icon>play_arrow</mat-icon>
+           </button>
+        </div>
+
+        <div class="stop">
+          <button mat-fab color="primary" aria-label="Example icon button with a delete icon" (click)="stopSound()">
+            <mat-icon>stop</mat-icon>
+          </button>
+        </div>
+
+      </div>
+
+  </div>
+
+</div>
+

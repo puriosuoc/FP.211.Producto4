@@ -1,0 +1,45 @@
+.botones {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.play, .stop, .pause {
+    padding: 10px;
+}
+
+.white {
+    color: white;
+}
+
+.tiempo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.barratiempo {
+    width: 85%;
+    padding: 10px;
+}
+
+/* Barra de volumen */
+
+.volumen{
+    width: 97%;
+    display: flex;
+    justify-content: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+
+
+.mdc-linear-progress {
+    border-radius: 8px;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}

@@ -1,0 +1,156 @@
+
+
+/* List CSS styles */
+.container {
+  background-color: var(--background);
+  font-family: sans-serif;
+}
+/*
+.filtros {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+
+h2 {
+  padding-top: 30px;
+  font-size: 30px;
+  margin: 8px;
+}
+
+.song {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6),
+  -9px -9px 16px rgba(255, 255, 255, 0.5);
+  margin: 10px;
+  position: relative;
+}
+
+.songs {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+}
+
+.songlist {
+  float: left;
+  display: flex;
+  align-items: center;
+}
+
+.titulo{
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.subtitulo{
+  color: #6c6c6c;
+  font-style: italic;
+}
+
+.songs li {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em 0;
+  height: 2.6em;
+  border-radius: 4px;
+}
+
+.songs li:hover {
+  color: #607D8B;
+  background-color: #DDD;
+  left: .1em;
+}
+
+.songs li.selected {
+  background-color: #9bdea4;
+  color: black;
+}
+
+.songs li.selected:hover {
+  background-color: #BBD8DC;
+  color: black;
+}
+
+.songs .badge {
+  display: inline-block;
+  font-size: small;
+  color: white;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color:#405061;
+  line-height: 1em;
+  position: relative;
+  left: -1px;
+  top: -4px;
+  height: 1.8em;
+  margin-right: .8em;
+  border-radius: 4px 0 0 4px;
+}
+
+.portada{
+  width: 40px;
+  border-radius: 4px;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+.tittle {
+  margin: 10px;
+  padding: 10px;
+  font-size: 16px;
+  width: 40%;
+}
+
+.subtittle {
+  margin: 10px;
+  padding: 10px;
+  font-size: 16px;
+  width: 40%;
+}
+
+*/
+
+
+.mdc-list {
+  padding: 0px 0;
+}
+
+.mdc-list:hover {
+  background-color: #d7ccec;
+  left: .1em;
+}
+
+.list {
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+mat-list.selected {
+  background-color: #bda7e8;
+}
+
+mat-list.selected:hover {
+  background-color: #bda7e8;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+.filtros {
+  display: flex;
+  justify-content: center;
+}
+
+.filtros mat-form-field {
+  padding-right: 10px;
+  padding-left: 10px;
+}

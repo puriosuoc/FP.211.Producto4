@@ -1,0 +1,60 @@
+<div class="container">
+
+  <div *ngIf="selectedSong" class="info">
+
+    <div class="cover"><img src="{{selectedSong.image}}" class="caratula"></div>
+
+    <div class="songinfo">
+
+      <form class="example-form">
+
+        <mat-form-field class="example-full-width">
+          <mat-label><mat-icon matListItemIcon>type_specimen</mat-icon> Tittle</mat-label>
+          <input matInput placeholder="" value="{{selectedSong.tittle}}" required>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label><mat-icon matListItemIcon>mic_external_on</mat-icon> Author</mat-label>
+          <input matInput placeholder="" value="{{selectedSong.artist}}" required>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label><mat-icon matListItemIcon>interpreter_mode</mat-icon> Subttitle</mat-label>
+          <input matInput placeholder="" value="{{selectedSong.subtittle}}" required>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label><mat-icon matListItemIcon>album</mat-icon> Album</mat-label>
+          <input matInput placeholder="" value="{{selectedSong.disc}}" required>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label><mat-icon matListItemIcon>calendar_month</mat-icon> Year</mat-label>
+          <input matInput placeholder="" value="{{selectedSong.year}}" required>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label><mat-icon matListItemIcon>sell</mat-icon> Style</mat-label>
+          <select matNativeControl required>
+            <option value="selected">{{selectedSong.style}}</option>
+            <option value="Pop">Pop</option>
+            <option value="Rock">Rock</option>
+            <option value="Clásica">Clásica</option>
+            <option value="Power Metal">Power Metal</option>
+            <option value="Trap">Trap</option>
+            <option value="Pop Rock">Pop Rock</option>
+          </select>
+        </mat-form-field>
+
+        <button mat-raised-button disabled>Submit</button>
+      </form>
+
+    </div>
+
+  </div>
+
+  <div class="selection" *ngIf="!selectedSong">
+    <div>
+      <p class="alert">Select a song! </p>
+    </div>
+  </div>
+
+</div>
+
+
+

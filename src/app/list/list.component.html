@@ -1,0 +1,62 @@
+<div class="container">
+
+  <div class="list">
+
+    <div class="filtros">
+
+    <mat-form-field class="tittle">
+      <input matInput [(ngModel)]="searchTittle" placeholder="Search by Tittle">
+    </mat-form-field>
+
+    <mat-form-field class="subtittle">
+      <mat-select [(ngModel)]="searchStyle">
+        <mat-option value="">Select music style</mat-option>
+        <mat-option value="">All</mat-option>
+        <mat-option value="Pop">Pop</mat-option>
+        <mat-option value="Rock">Rock</mat-option>
+        <mat-option value="Clásica">Clásica</mat-option>
+        <mat-option value="Power Metal">Power Metal</mat-option>
+        <mat-option value="Trap">Trap</mat-option>
+        <mat-option value="Pop Rock">Pop Rock</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    </div>
+
+    <mat-list *ngFor="let song of songs" [class.selected]="song === selectedSong" (click)="onSelect(song)" class="itemlist" >
+      <a mat-list-item *ngIf="song.tittle.toLowerCase().includes(searchTittle.toLowerCase()) && song.style.toLowerCase().includes(searchStyle.toLowerCase())">
+        <img matListItemAvatar src="{{song.image}}" class="portada" alt="">
+        <h3 matListItemTitle>{{song.tittle}}</h3>
+        <p matListItemLine>
+          By <span>{{song.artist}}</span> ft. <span>{{song.subtittle}}</span>
+        </p>
+      </a>
+    </mat-list>
+
+
+
+    <!--
+    <ul class="songs">
+      <ng-container *ngFor="let song of songs">
+        <div *ngIf="song.tittle.toLowerCase().includes(searchTittle.toLowerCase()) && song.style.toLowerCase().includes(searchStyle.toLowerCase())">
+          <li [class.selected]="song === selectedSong" (click)="onSelect(song)">
+            <div class="songlist">
+              <div class="portada"><img src="{{song.image}}" class="miniportada"></div>
+              <div class="titulo">{{song.tittle}}</div>
+              <div class="subtitulo">{{song.subtittle}}</div>
+            </div>
+          </li>
+        </div>
+      </ng-container>
+    </ul>
+    -->
+
+  </div>
+
+</div>
+
+
+
+
+
+
