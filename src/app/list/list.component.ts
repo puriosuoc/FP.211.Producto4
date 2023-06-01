@@ -26,7 +26,7 @@ export class ListComponent implements OnInit {
 
   onSelect(song: Song): void {
     this.selectedSong = song;
-    this.songService.play(song);
+    this.songService.selected(song);
   }
 
 }

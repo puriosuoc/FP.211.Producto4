@@ -11,7 +11,7 @@ export class SongService extends EventEmitter{
   public readonly playEvent: EventEmitter<Song> = new EventEmitter<Song>();
 
 
-  play(song: Song): Song {
+  selected(song: Song): Song {
     this.playing = song;
     this.playEvent.emit(song);
     return this.playing;
