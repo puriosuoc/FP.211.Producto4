@@ -52,6 +52,7 @@ export class PlayerComponent implements OnInit {
       this.playing = true;
       this.buttonActive = true;
     }
+    //console.log("Reproduciendo: " + this.selectedSong?.tittle);
   }
 
   pauseSound() {
@@ -74,7 +75,6 @@ export class PlayerComponent implements OnInit {
     setTimeout(() => {
       this.updateProgress();
     }, 1000)
-    console.log("Progreso:" + this.audio.currentTime);
   }
 
   onProgressClick(event: MouseEvent) {

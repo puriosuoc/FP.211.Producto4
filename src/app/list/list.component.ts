@@ -14,19 +14,20 @@ export class ListComponent implements OnInit {
   selectedSong: Song | undefined;
   searchTittle: string = '';
   searchStyle: string = '';
-  searchTerm: string = '';
 
   constructor(protected songService: SongService) {
     this.songs = [];
   }
 
-  ngOnInit() {
-    this.songs = this.songService.getSongs();
+  ngOnInit(): void {
+    this.songService.getSongs().subscribe(songs => {
+      this.songs = songs;
+    })
   }
 
   onSelect(song: Song): void {
     this.selectedSong = song;
-    this.songService.play(song);
+    this.songService.selected(song);
   }
 
 }
