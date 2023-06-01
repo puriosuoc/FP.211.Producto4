@@ -6,32 +6,31 @@
 
     <div class="songinfo">
 
-      <form class="example-form">
-
+      <form class="example-form" (ngSubmit)="Submit()">
         <mat-form-field class="example-full-width">
           <mat-label><mat-icon matListItemIcon>type_specimen</mat-icon> Tittle</mat-label>
-          <input matInput placeholder="" value="{{selectedSong.tittle}}" required>
+          <input matInput placeholder="" name="tittle" #tittle="ngModel" [(ngModel)]="selectedSong.tittle" required>
         </mat-form-field>
         <mat-form-field class="example-full-width">
           <mat-label><mat-icon matListItemIcon>mic_external_on</mat-icon> Author</mat-label>
-          <input matInput placeholder="" value="{{selectedSong.artist}}" required>
+          <input matInput placeholder="" name="artist" #artist="ngModel" [(ngModel)]="selectedSong.artist" required>
         </mat-form-field>
         <mat-form-field class="example-full-width">
           <mat-label><mat-icon matListItemIcon>interpreter_mode</mat-icon> Subttitle</mat-label>
-          <input matInput placeholder="" value="{{selectedSong.subtittle}}" required>
+          <input matInput placeholder="" name="subtittle" #subtittle="ngModel" [(ngModel)]="selectedSong.subtittle" required>
         </mat-form-field>
         <mat-form-field class="example-full-width">
           <mat-label><mat-icon matListItemIcon>album</mat-icon> Album</mat-label>
-          <input matInput placeholder="" value="{{selectedSong.disc}}" required>
+          <input matInput placeholder="" name="disc" #disc="ngModel" [(ngModel)]="selectedSong.disc" required>
         </mat-form-field>
         <mat-form-field class="example-full-width">
           <mat-label><mat-icon matListItemIcon>calendar_month</mat-icon> Year</mat-label>
-          <input matInput placeholder="" value="{{selectedSong.year}}" required>
+          <input matInput placeholder="" name="year" #year="ngModel" [(ngModel)]="selectedSong.year" required>
         </mat-form-field>
         <mat-form-field class="example-full-width">
           <mat-label><mat-icon matListItemIcon>sell</mat-icon> Style</mat-label>
-          <select matNativeControl required>
-            <option value="selected">{{selectedSong.style}}</option>
+          <select matNativeControl name="style" #style="ngModel" [(ngModel)]="selectedSong.style" required>
+            <option [value]="selectedSong.style">{{ selectedSong.style }}</option>
             <option value="Pop">Pop</option>
             <option value="Rock">Rock</option>
             <option value="Clásica">Clásica</option>
@@ -41,7 +40,7 @@
           </select>
         </mat-form-field>
 
-        <button mat-raised-button disabled>Submit</button>
+        <button mat-raised-button type="submit">Submit</button>
       </form>
 
     </div>

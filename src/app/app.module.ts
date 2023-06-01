@@ -23,6 +23,9 @@ import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatSliderModule} from "@angular/material/slider";
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
 
 @NgModule({
@@ -49,7 +52,9 @@ import {MatSliderModule} from "@angular/material/slider";
         MatProgressBarModule,
         MatToolbarModule,
         MatDatepickerModule,
-        MatSliderModule
+        MatSliderModule,
+        provideFirebaseApp(() => initializeApp(environment.firebase)),
+        provideFirestore(() => getFirestore())
     ],
   providers: [
     SongService

@@ -1,4 +1,4 @@
-import { Song } from './song';
+/*import { Song } from './song';
 
 export const SONGS: Song[] = [
   { tittle: 'Titan', subtittle: 'Joan Garriga i el Mariatxi galàctic', artist:'Txarango', year:2021, disc:'El Gran Ball', style:'Rock', image:'../../assets/cover1.jpg', url:'../../assets/song1.mp3', discografica: 'random records', formato: 'digital'  },
@@ -9,4 +9,4 @@ export const SONGS: Song[] = [
   { tittle: 'Una Lluna a L´Aigua', subtittle: 'ZOO', artist:'Macaco', year:2018, disc:'Lorem Ipsum', style:'Trap', image:'../../assets/cover6.jpg', url:'../../assets/song3.mp3', discografica: 'random records', formato: 'digital'  },
   { tittle: 'Benditas Vida', subtittle: 'Amparanoia, Muerdo', artist:'Two Doors Cinema Club', year:2011, disc:'El Gran Ball', style:'Rock', image:'../../assets/cover7.jpg', url:'../../assets/song1.mp3', discografica: 'random records', formato: 'digital'  },
   { tittle: 'Saying Goodbye in the Rain', subtittle: 'Koers', artist:'SFDK', year:1998, disc:'SUNSET SUN SKY', style:'Trap', image:'../../assets/cover8.jpg', url:'../../assets/song2.mp3', discografica: 'random records', formato: 'digital'  },
-];
+];*/
